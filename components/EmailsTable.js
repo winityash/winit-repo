@@ -323,7 +323,15 @@ export default function EmailsTable() {
                 {filteredEmails.map((email) => {
                   const dateTime = formatDate(email.date_received);
                   return (
-                    <tr key={email.id} className="hover:bg-gray-50">
+                    <tr
+                      key={email.id}
+                      className="hover:bg-gray-50 cursor-pointer"
+                      onClick={() => {
+                        console.log('Row clicked for email:', email);
+                        setDetailsEmail(email);
+                        setShowDetailsModal(true);
+                      }}
+                    >
                       <td>
                         <div className="text-sm">
                           <div>{dateTime.date}</div>
