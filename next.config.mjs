@@ -1,5 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Production optimizations
+  reactStrictMode: true,
+  poweredByHeader: false,
+
+  // Enable SWC minification
+  swcMinify: true,
+
+  // Optimize images
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.ngrok-free.app',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.ngrok.app',
+      },
+    ],
+  },
+
   async headers() {
     return [
       {
