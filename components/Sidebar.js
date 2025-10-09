@@ -95,7 +95,7 @@ export default function Sidebar({ activeTab, setActiveTab, collapsed, setCollaps
           />
         </div>
         <div className="logo-text-container">
-          <h1 className="logo-title">WINIT</h1>
+          <h1 className="logo-title">WINIT LPO</h1>
         </div>
       </div>
 
